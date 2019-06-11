@@ -1,6 +1,5 @@
-# test
-
-> A Vue.js project
+# vue-template
+> A Vue.js template
 
 ## Build Setup
 
