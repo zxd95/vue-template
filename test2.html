@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>测试</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+    }
+    #tab {
+      width: 400px;
+      height: 300px;
+      border: blue 1px solid;
+      margin: 30px auto;
+    }
+    #tab ul li {
+      float: left;
+      width: 133px;
+      height: 30px;
+      list-style: none;
+      text-align: center;
+      line-height: 30px;
+    }
+    .main {
+      width: 390px;
+      height: 250px;
+      margin-left: 5px;
+      margin-top: 40px;
+      display: none;
+      position: absolute;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="tab">
+    <!--分类-->
+    <ul>
+      <li style="background: blanchedalmond;">分类1</li>
+      <li style="background: burlywood;">分类2</li>
+      <li style="background: cyan;">分类3</li>
+    </ul>
+    <!--内容-->
+    <div class="main" style="background: blanchedalmond;display: block;"></div>
+    <div class="main" style="background: burlywood;"></div>
+    <div class="main" style="background: cyan;"></div>
+  </div>
+  <script>
+    var tab = document.getElementById("tab");
+    var list = tab.getElementsByTagName("li");
+    var cn = tab.getElementsByClassName("main");
+
+    for (var i = 0; i < list.length; i++) {
+      list[i].xuhao = i;
+      list[i].onclick = function () {
+        var c = this.xuhao;
+        for (var i = 0; i < 3; i++) {
+          cn[i].style.display = "none";
+        }
+        cn[c].style.display = "block";
+      }
+    }
+  </script>
+</body>
+
+</html>
