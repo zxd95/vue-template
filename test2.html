@@ -2,33 +2,72 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>测试</title>
+  <title>分类模块</title>
   <style>
     * {
       padding: 0;
       margin: 0;
     }
+
     #tab {
-      width: 400px;
+      width: 1000px;
       height: 300px;
-      border: blue 1px solid;
       margin: 30px auto;
     }
+
     #tab ul li {
       float: left;
-      width: 133px;
+      width: 166px;
       height: 30px;
       list-style: none;
       text-align: center;
       line-height: 30px;
     }
+
     .main {
-      width: 390px;
-      height: 250px;
-      margin-left: 5px;
-      margin-top: 40px;
+      width: 1000px;
+      height: 220px;
+      margin-top: 160px;
       display: none;
       position: absolute;
+      border: 1px solid #d2d2d2;
+      border-radius: 8px;
+      white-space:nowrap;
+      overflow-x:auto;
+    }
+
+    .main_concent {
+      height: 200px;
+      padding: 10px;
+    }
+
+    .img_main {
+      float: left;
+      width: 200px;
+      height: 200px;
+      margin-right: 12px;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .img_concent {
+      width: 200px;
+      height: 200px;
+      display: block;
+      border-radius: 12px;
+      transition: all 1s;
+      transition:All 0.4s ease-in-out;
+      -webkit-transition:All 0.4s ease-in-out;
+      -moz-transition:All 0.4s ease-in-out;
+      -o-transition:All 0.4s ease-in-out;
+    }
+
+    .img_concent:hover {
+      transform: scale(1.1);
+      -webkit-transform: scale(1.1);
+      -moz-transform: scale(1.1);
+      -o-transform: scale(1.1);
+      -ms-transform: scale(1.1);
     }
   </style>
 </head>
@@ -37,20 +76,91 @@
   <div id="tab">
     <!--分类-->
     <ul>
-      <li style="background: blanchedalmond;">分类1</li>
-      <li style="background: burlywood;">分类2</li>
-      <li style="background: cyan;">分类3</li>
+      <li>房地产</li>
+      <li>电子商务</li>
+      <li>机器人</li>
+      <li>健康</li>
+      <li>美容</li>
+      <li>能源</li>
+      <li>农业</li>
+      <li>汽车交通</li>
+      <li>人工智能</li>
+      <li>社交媒体</li>
+      <li>生产制造</li>
+      <li>生物科技</li>
+      <li>房地产</li>
+      <li>体育</li>
+      <li>文化娱乐</li>
+      <li>先进材料</li>
+      <li>消费者电子</li>
+      <li>硬件</li>
+      <li>专业服务</li>
+      <li>保险服务</li>
+      <li>教育业</li>
+      <li>金融服务</li>
+      <li>金融科技</li>
+      <li>保险科技</li>
+      <li>物流</li>
+      <li>虚拟现实</li>
+      <li>增强现实</li>
+      <li>物流</li>
+      <li>游戏</li>
     </ul>
-    <!--内容-->
-    <div class="main" style="background: blanchedalmond;display: block;"></div>
-    <div class="main" style="background: burlywood;"></div>
-    <div class="main" style="background: cyan;"></div>
+    <!--分类内容-->
+    <div class="main">
+      <div class="main_concent">
+        <div class="img_main">
+          <img class="img_concent"
+            src="https://ss2.baidu.com/-vo3dSag_xI4khGko9WTAnF6hhy/image/h%3D300/sign=00af05b334f33a87816d061af65d1018/8d5494eef01f3a29f863534d9725bc315d607c8e.jpg" />
+        </div>
+        <div class="img_main">
+          <img class="img_concent"
+            src="https://ss2.baidu.com/-vo3dSag_xI4khGko9WTAnF6hhy/image/h%3D300/sign=00af05b334f33a87816d061af65d1018/8d5494eef01f3a29f863534d9725bc315d607c8e.jpg" />
+        </div>
+      </div>
+    </div>
+    <div class="main">
+      <div class="main_concent">
+        <div class="img_main">
+          <img class="img_concent"
+            src="https://ss2.baidu.com/-vo3dSag_xI4khGko9WTAnF6hhy/image/h%3D300/sign=00af05b334f33a87816d061af65d1018/8d5494eef01f3a29f863534d9725bc315d607c8e.jpg" />
+        </div>
+        <div class="img_main">
+          <img class="img_concent"
+            src="https://ss2.baidu.com/-vo3dSag_xI4khGko9WTAnF6hhy/image/h%3D300/sign=00af05b334f33a87816d061af65d1018/8d5494eef01f3a29f863534d9725bc315d607c8e.jpg" />
+        </div>
+      </div>
+    </div>
+    <div class="main"></div>
+    <div class="main"></div>
+    <div class="main"></div>
+    <div class="main"></div>
+    <div class="main"></div>
+    <div class="main"></div>
+    <div class="main"></div>
+    <div class="main"></div>
+    <div class="main"></div>
+    <div class="main"></div>
+    <div class="main"></div>
+    <div class="main"></div>
+    <div class="main"></div>
+    <div class="main"></div>
+    <div class="main"></div>
+    <div class="main"></div>
+    <div class="main"></div>
+    <div class="main"></div>
+    <div class="main"></div>
+    <div class="main"></div>
+    <div class="main"></div>
+    <div class="main"></div>
+    <div class="main"></div>
+    <div class="main"></div>
+    <div class="main"></div>
   </div>
   <script>
     var tab = document.getElementById("tab");
     var list = tab.getElementsByTagName("li");
     var cn = tab.getElementsByClassName("main");
-
     for (var i = 0; i < list.length; i++) {
       list[i].xuhao = i;
       list[i].onclick = function () {
