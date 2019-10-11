@@ -8,7 +8,7 @@
         <div class="modal-warpper">
           <div class="modal-content">
             <div class="modal-header">
-              <span>{{ title }}</span>
+              <span class="modal-title">{{ title }}</span>
             </div>
             <div class="modal-body">
               <span class="modal-text">{{ percent }}%</span>
@@ -106,6 +106,18 @@ export default {
   padding: 14px 16px;
   line-height: 1;
 }
+.modal-title {
+  display: inline-block;
+  width: 100%;
+  height: 20px;
+  line-height: 20px;
+  font-size: 16px;
+  color: #17233d;
+  font-weight: 500;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
 .modal-wrapper {
   position: absolute;
   top: 50%;
@@ -131,6 +143,7 @@ export default {
   line-height: 22px;
   text-align: center;
   font-size: 14px;
+  color: #515a6e;
 }
 .modal-processbar {
   padding: 14px 0;
