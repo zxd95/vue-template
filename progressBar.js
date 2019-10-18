@@ -1,10 +1,10 @@
-import progressBar from './progressBar.vue'
+import qtoCommonPopProgress from './qtoCommonPopProgress.vue'
 
 export default {
   install(Vue, options = {}) {
-    Vue.component(progressBar.name, progressBar)
+    Vue.component(qtoCommonPopProgress.name, qtoCommonPopProgress)
 
-    const Component = Vue.extend(progressBar)
+    const Component = Vue.extend(qtoCommonPopProgress)
 
     const { autoFinish, ...res } = options
 
@@ -25,45 +25,43 @@ export default {
     let timer = null
 
     const progressMethods = {
+      processbar() {
+        vm.percent++
+        if (vm.percent >= 95) {
+          vm.percent = 95
+        }
+        return vm.percent
+      },
       start() {
         if (Vue.$isServer) return
         vm.percent = 0
         vm.popShow = true
         vm.show = true
         vm.canSuccess = false
-        vm.process
         timer = setInterval(() => {
-          process = this.processbar()
-          if (process === 100) {
-            vm.canSuccess = true
+          if (this.processbar() === 95) {
             clearInterval(timer)
           }
         }, 1000)
       },
-      processbar() {
-        vm.percent++
-        if (vm.percent >= 100) {
-          vm.percent = 100
-        }
-        return vm.percent
-      },
-      hide() {
+      close() {
         clearInterval(timer)
         vm.popShow = false
         vm.show = false
         setTimeout(() => {
           vm.percent = 0
           timer = null
+          document.body.removeChild(vm.$el)
         }, vm.options.transition.opacitySpeed)
       },
       fail() {
         if (Vue.$isServer) return
         vm.canSuccess = false
         vm.percent = 100
-        this.hide()
+        this.close()
       }
     }
 
-    Vue.prototype.$progress = progressMethods
+    Vue.prototype.$PopProgress = progressMethods
   }
 }
