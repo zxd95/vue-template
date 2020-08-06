@@ -4,14 +4,17 @@
       <div class="chat-head">
         <div class="head-content">
           <div class="user-name">
-            <span>可可爱爱广东银</span>
+            <span>漂漂亮亮广东银</span>
           </div>
         </div>
       </div>
       <div class="chat-body">
         <div class="body-left">
           <div class="body-left-content">
-            <div class="content-inner"></div>
+            <div class="content-inner">
+              <div class="guest-inner">Hi，你好。</div>
+              <div class="owner-inner">Hello，我叫可可爱爱酱油君。</div>
+            </div>
             <div class="content-input">
               <div class="input">
                 <input type="text" v-model="content">
@@ -23,10 +26,10 @@
           </div>
         </div>
         <div class="body-right">
-          <div>1</div>
-          <div>2</div>
-          <div>3</div>
-          <div>4</div>
+          <div>族谱</div>
+          <div>笔记本</div>
+          <div>note</div>
+          <div>自动AI语句</div>
         </div>
       </div>
     </div>
@@ -37,7 +40,7 @@
 export default {
   data() {
     return {
-      content: 'fdsafdas'
+      content: '今天天气真好啊，约吗？'
     }
   }
 }
@@ -75,6 +78,21 @@ export default {
 }
 .content-inner {
   flex: 1;
+  padding: 14px;
+}
+.content-inner .guest-inner {
+  padding: 8px 10px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  background-color: #93f9c0;
+}
+.content-inner .owner-inner {
+  display: flex;
+  flex-direction: row-reverse;
+  padding: 8px 10px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  background-color: #f5f5f5;
 }
 .content-input {
   height: 40px;
@@ -114,7 +132,18 @@ export default {
 .body-right div {
   flex: 50%;
   height: auto;
-  background-color: #ffff91;
   box-sizing: content-box;
+}
+.body-right div:nth-child(1) {
+  background-color: #ffff91;
+}
+.body-right div:nth-child(2) {
+  background-color: #91ffa9;
+}
+.body-right div:nth-child(3) {
+  background-color: #91b4ff;
+}
+.body-right div:nth-child(4) {
+  background-color: #ff919a;
 }
 </style>
